@@ -58,7 +58,28 @@ class CardsViewController: UIViewController {
             cardChangingCenter = profileView.center
         }
         else if sender.state == .ended {
-            
+            if profileView.center.x - cardOriginalCenter.x > 100 {
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.profileView.center.x = self.cardOriginalCenter.x.multiplied(by: 4)
+                }, completion: { (completed) in
+                    sleep(1)
+                    self.profileView.center = self.cardOriginalCenter
+                    self.profileView.transform = CGAffineTransform.identity
+                })
+            }
+            else if profileView.center.x - cardOriginalCenter.x < -100 {
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.profileView.center.x = self.cardOriginalCenter.x.multiplied(by: -2)
+                }, completion: { (completed) in
+                    sleep(1)
+                    self.profileView.center = self.cardOriginalCenter
+                    self.profileView.transform = CGAffineTransform.identity
+                })
+            }
+            else {
+                profileView.center = cardOriginalCenter
+                profileView.transform = CGAffineTransform.identity
+            }
         }
     }
 
