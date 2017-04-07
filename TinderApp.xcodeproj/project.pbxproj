@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460196221E9740C100DDBD49 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460196201E9740C100DDBD49 /* BaseTransition.swift */; };
+		460196231E9740C100DDBD49 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460196211E9740C100DDBD49 /* FadeTransition.swift */; };
 		4632DA861E970E55002814B3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4632DA851E970E55002814B3 /* ProfileViewController.swift */; };
 		46DEDEAF1E96F76D008C0CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46DEDEAE1E96F76D008C0CBF /* AppDelegate.swift */; };
 		46DEDEB41E96F76E008C0CBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46DEDEB21E96F76D008C0CBF /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		460196201E9740C100DDBD49 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		460196211E9740C100DDBD49 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 		4632DA851E970E55002814B3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		46DEDEAB1E96F76C008C0CBF /* TinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46DEDEAE1E96F76D008C0CBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		46DEDEAD1E96F76C008C0CBF /* TinderApp */ = {
 			isa = PBXGroup;
 			children = (
+				460196201E9740C100DDBD49 /* BaseTransition.swift */,
+				460196211E9740C100DDBD49 /* FadeTransition.swift */,
 				46DEDEC31E96F927008C0CBF /* View Controllers */,
 				46DEDEAE1E96F76D008C0CBF /* AppDelegate.swift */,
 				46DEDEB21E96F76D008C0CBF /* Main.storyboard */,
@@ -152,7 +158,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				46DEDEB71E96F76E008C0CBF /* TinderApp.xcdatamodeld in Sources */,
+				460196231E9740C100DDBD49 /* FadeTransition.swift in Sources */,
 				46DEDEAF1E96F76D008C0CBF /* AppDelegate.swift in Sources */,
+				460196221E9740C100DDBD49 /* BaseTransition.swift in Sources */,
 				4632DA861E970E55002814B3 /* ProfileViewController.swift in Sources */,
 				46DEDEC51E96F95F008C0CBF /* CardsViewController.swift in Sources */,
 			);

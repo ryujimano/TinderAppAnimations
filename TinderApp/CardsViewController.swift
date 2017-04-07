@@ -14,6 +14,9 @@ class CardsViewController: UIViewController {
     var cardChangingCenter: CGPoint!
 
     @IBOutlet weak var profileView: UIImageView!
+    
+    var fadeTransition: FadeTransition!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -89,13 +92,25 @@ class CardsViewController: UIViewController {
     
     
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! ProfileViewController
+        
+        // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
+        var destination = segue.destination as! ProfileViewController
+        
+        // Set the modal presentation style of your destinationViewController to be custom.
+        destination.modalPresentationStyle = UIModalPresentationStyle.custom
+        
+        // Create a new instance of your fadeTransition.
+        fadeTransition = FadeTransition()
+        
+        // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
+        destination.transitioningDelegate = fadeTransition
         
         destination.image = profileView.image
+        
+        // Adjust the transition duration. (seconds)
+        fadeTransition.duration = 0.3
     }
-    
 
 }
