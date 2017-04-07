@@ -83,14 +83,19 @@ class CardsViewController: UIViewController {
         }
     }
 
-    /*
+    @IBAction func onTap(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "profileSegue", sender: nil)
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let destination = segue.destination as! ProfileViewController
+        
+        destination.image = profileView.image
     }
-    */
+    
 
 }
